@@ -84,4 +84,19 @@ public class CCuenta {
     public void setTipoInterés(double tipoInterés) {
         this.tipoInterés = tipoInterés;
     }
+    
+    public static void operativa_cuenta(CCuenta cuenta) {
+    	try {
+    	cuenta.retirar(2300);
+    	System.out.println("Retirada realizada");
+    	} catch (Exception e) {
+    	System.out.println("Fallo al retirar");
+    	}
+    	try {
+    	System.out.println("Ingreso en cuenta");
+    	cuenta.ingresar(695);
+    	} catch (Exception e) {
+    	System.out.println("Fallo al ingresar");
+    	}
 }
+    }
