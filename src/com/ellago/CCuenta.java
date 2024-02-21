@@ -82,20 +82,20 @@ public class CCuenta {
     public void setCuenta(String cuenta) {
         this.cuenta = cuenta;
     }
-
-    public static void operativa_cuenta(CCuenta cuenta) {
-        try {
-            cuenta.retirar(2300);
-            System.out.println("Retirada realizada");
-        } catch (Exception e) {
-            System.out.println("Fallo al retirar");
-        }
-        try {
-            System.out.println("Ingreso en cuenta");
-            cuenta.ingresar(695);
-        } catch (Exception e) {
-            System.out.println("Fallo al ingresar");
-        }
+    
+    public static void operativa_cuenta(CCuenta cuenta, float cantidad) {
+    	try {
+    	cuenta.retirar(cantidad);
+    	System.out.println("Retirada realizada");
+    	} catch (Exception e) {
+    	System.out.println("Fallo al retirar");
+    	}
+    	try {
+    	System.out.println("Ingreso en cuenta");
+    	cuenta.ingresar(cantidad);
+    	} catch (Exception e) {
+    	System.out.println("Fallo al ingresar");
+    	}
     }
 }
 
